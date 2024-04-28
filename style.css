@@ -1,0 +1,1833 @@
+@import url('https://fonts.googleapis.com/ccs2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 1;
+  padding: 1;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+
+body {
+  background: white;
+}
+
+body.dark-mode {
+  background: black;
+}
+
+.home-button {
+  position: relative;
+  color: #00ff04;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 300;
+  left: -120px;
+  /* Adjust as needed */
+}
+
+
+.home-button a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.home-button a:hover,
+.home-button a.active {
+  color: #000000;
+}
+
+.about-button {
+  position: relative;
+  color: #00ff04;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 300;
+  left: -80px;
+  /* Adjust as needed */
+}
+
+.about-button a:hover {
+  color: #000000;
+  /* Change the color on hover */
+}
+
+.about-button a:hover,
+.about-button a.active {
+  color: #000000;
+}
+
+.lifestyle-button {
+  position: relative;
+  color: #00ff04;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 300;
+  left: -40px;
+  /* Adjust as needed */
+}
+
+.lifestyle-button a:hover {
+  color: #000000;
+  /* Change the color on hover */
+}
+
+.lifestyle-button a:hover,
+.lifestyle-button a.active {
+  color: #000000;
+}
+
+.resources-button {
+  position: relative;
+  color: #00ff04;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 300;
+  left: 0px;
+  /* Adjust as needed */
+}
+
+.resources-button a:hover {
+  color: #000000;
+  /* Change the color on hover */
+}
+
+.resources-button a:hover,
+.resources-button a.active {
+  color: #000000;
+}
+
+.network-button {
+  position: relative;
+  color: #00ff04;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 300;
+  right: -40px;
+  /* Adjust as needed */
+}
+
+.network-button a:hover {
+  color: #000000;
+  /* Change the color on hover */
+}
+
+.network-button a:hover,
+.network-button a.active {
+  color: #000000;
+}
+
+
+#theme-button {
+  /* Green */
+  border: none;
+  color: #000000;
+  background: #757575;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px -200px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#theme-button:hover {
+  background-color: #000000;
+  color: #27d510;
+}
+
+
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-top: -60px;
+  margin-right: 200px;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 0%;
+  padding-right: 10%;
+}
+
+.Logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+span {
+  color: black
+}
+
+i {
+  margin-right: 10px;
+}
+
+.navbar {
+  position: fixed;
+  /* Make the navbar a reference point for absolute positioning */
+  text-align: center;
+  /* Center-align content within the navbar */
+  margin-left: 120px;
+}
+
+
+
+.navbar a {
+  display: flex;
+  justify-content: space-between;
+  /* Align items to the start and end of the container */
+  align-items: center;
+  /* Vertically center items */
+  background-color: #1f640c;
+  /* Example background color */
+  opacity: 1;
+  color: white;
+  padding: 15px 35px;
+  /* Add padding to the navbar */
+  border-radius: 15px;
+}
+
+
+.navbar a:hover {
+  color: #000000;
+  transition: .3s;
+  transform: scale(1.5, 1.5);
+  cursor: pointer;
+  /* Change the color on hover */
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #000000;
+}
+
+
+.header-container {
+  position: fixed;
+  top: 2%;
+  left: 20%;
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 0px;
+  font-weight: 300;
+  z-index: 200;
+  overflow: hidden;
+}
+
+.logo-image {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 400px;
+  width: 400px;
+  margin-right: 100px;
+  border-radius: 50%;
+  /* Make it round */
+
+  /* Glow effect */
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+  /* Adjust values as needed */
+}
+
+.logo-image {
+  /* Your existing styles */
+  animation-name: spin;
+  /* Name of the animation */
+  animation-duration: 8s;
+  /* Duration of the animation */
+  animation-timing-function: linear;
+  /* Timing function */
+  animation-iteration-count: infinite;
+  /* Makes the animation repeat infinitely */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    /* Initial rotation angle */
+  }
+
+  to {
+    transform: rotate(360deg);
+    /* Final rotation angle */
+  }
+}
+
+
+
+.glow-text {
+  /* Glow effect */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    /* White glow */
+    0 0 20px rgba(255, 255, 255, 0.8),
+    /* Larger white glow */
+    0 0 30px rgba(255, 255, 255, 1);
+  /* Even larger white glow */
+  text-decoration: underline;
+  font-weight: bold;
+  /* Make the text bold for emphasis */
+  font-size: 2em;
+  /* Adjust font size as needed */
+  font-family: 'Arial', sans-serif;
+  /* Specify font family */
+}
+
+.glow-text2 {
+  /* Glow effect */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    /* White glow */
+    0 0 20px rgba(255, 255, 255, 0.8),
+    /* Larger white glow */
+    0 0 30px rgba(255, 255, 255, 1);
+  /* Even larger white glow */
+  /* Adjust values as needed */
+  text-decoration: overline;
+  font-weight: bold;
+  /* Make the text bold for emphasis */
+  font-size: 1.5em;
+  /* Adjust font size as needed */
+  font-family: 'Arial', sans-serif;
+  /* Specify font family */
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.glow-text {
+  /* Other styles */
+  animation: flash 2s infinite;
+  /* Flashing animation */
+}
+
+.glow-text2 {
+  /* Other styles */
+  animation: flash 2s infinite;
+  /* Flashing animation */
+}
+
+
+.navbar a {
+  /* Glow effect */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  /* Adjust values as needed */
+}
+
+
+
+.logo-image::before {
+  content: '';
+  position: relative;
+  top: 0;
+  right: 50%;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: .4s;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  /* Ensure it's above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -60px;
+}
+
+.spinner {
+  position: fixed;
+  bottom: 120px;
+  /* Adjust the value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  /* Ensure it's above other content */
+}
+
+
+.spinner {
+  border: 12px solid #f3f3f3;
+  /* Light grey */
+  border-top: 12px solid #00ff59;
+  /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  /* Rotate animation */
+  margin-top: 20px;
+  /* Adjust the margin to move it down */
+  box-shadow: 0 0 20px rgba(0, 255, 89, 0.7);
+  /* Glow effect */
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.hero {
+  background-size: cover;
+  background: linear-gradient(45deg, #ffffff, #000000, #035410), url(Black.jpg);
+  animation: color 12 ease-in-out infinite;
+  background-position: cover;
+  height: 100vh;
+  width: 195vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode .hero {
+  background: linear-gradient(45deg, #095f07, #000000, #0f0b0b);
+  animation: color 12 ease-in-out infinite;
+  background-position: cover;
+  height: 100vh;
+  width: 195vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  background-size: cover;
+}
+
+
+.hero-content h1 {
+  display: inline-block;
+  font-size: 3rem;
+  margin-top: 200px;
+  position: relative;
+  bottom: 120px;
+  pointer-events: none;
+
+}
+
+
+
+.hero-content h3 {
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  bottom: 100px;
+  pointer-events: none;
+}
+
+.join-button {
+  padding: 1rem 2rem;
+  margin-top: 250px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.join-button:hover {
+  background-color: #15842b;
+}
+
+
+.Home {
+  height: 100vh;
+  width: 100vw;
+  background: url('MindfulMotion.gif');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+
+  /* Add glowing effect */
+  box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.8) inset;
+  filter: blur(1px);
+}
+
+
+
+.Home-content {
+  max-width: 600px;
+}
+
+.Home-content h1 {
+  position: relative;
+  margin-top: 100px;
+  font-size: 70px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 800;
+  width: 1000px;
+  line-height: 1.2;
+  animation: glow 2.0s infinite alternate;
+
+
+}
+
+.Home-content h1::before {
+  content: '';
+  position: aboslute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+
+
+}
+
+.Home-content h3 {
+  font-size: 32px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  color: #e09b06;
+  animation: glow 1.5s infinite alternate;
+
+
+}
+
+.Home-content p {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 20px 0 40px;
+  color: #c9c197;
+
+
+}
+
+.Home-content .HomeButtonBox {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+
+.Home-content .HomeButtonBox a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #f3f1f1;
+  border: 2px solod blue;
+  border-radius: 8px;
+  font-size: 19px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.Home-content .HomeButtonBox a {
+  color: black;
+}
+
+
+.Home-content .HomeButtonBox a:nth-child(2) {
+  background: #f3f1f1;
+  color: #007a2f;
+}
+
+.Home-content .HomeButtonBox a:nth-child(2):hover {
+  color: green;
+}
+
+.Home-content .HomeButtonBox a:nth-child(2)::before {
+  background: black
+}
+
+.Home-content .HomeButtonBox a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: green;
+  z-index: -1;
+  transition: .5s;
+
+}
+
+.Home-content .HomeButtonBox a:hover::before {
+  width: 100%;
+
+
+}
+
+.resources-container {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.resources-container a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #e09b06;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.resources-container a:hover {
+  color: white;
+}
+
+
+.resources-container a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000000;
+  z-index: -1;
+  transition: .5s;
+}
+
+.resources-container a:hover::before {
+  width: 100%;
+}
+
+
+.videocontainer {
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  justify-content: center;
+  border: 4px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/*
+.PreImage1 {
+  width: 75%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 1000px;
+  top: 180px;
+  justify-content: space-evenly;
+}
+
+.PreImage2 {
+  width: 75%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 100px;
+  top: 180px;
+  justify-content: center;
+
+}
+*/
+
+.PreImage1 {
+  width: 75%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+
+}
+
+
+.PreImage2 {
+  width: 75%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+
+}
+
+.Home-content p {
+  color: #0f6d03;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-family: "Georgia", serif;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+  /* New property: Add border-radius */
+}
+
+/* Paragraphs */
+p {
+  color: #7b6b6b;
+  /* Text color */
+  font-size: 14px;
+  /* Font size */
+  line-height: 1.6;
+  /* Line height */
+  margin-bottom: 20px;
+  /* Bottom margin */
+  text-align: justify;
+  /* Text alignment */
+  font-family: "Georgia", serif;
+  /* Font family */
+  background-color: transparent;
+  /* Background color */
+  padding: 20px;
+  /* Padding */
+  border-radius: 5px;
+  /* Border radius */
+}
+
+
+/* Add the new styles below */
+.petition-container {
+  display: flex;
+  height: calc(100vh - 40px);
+  margin-top: 50px;
+  /* Adjust the value of 40px according to the desired extra space */
+}
+
+
+.petition-para {
+  flex: 1;
+  padding-right: 20px;
+
+}
+
+.signatures {
+  width: 40%;
+  /* Set width for the signatures container */
+  background-color: #f9f9f9;
+  /* Set background color for light theme */
+  color: #000000;
+  /* Set text color for light theme */
+  padding: 20px;
+  /* Add padding for inner content */
+  border-radius: 10px;
+  /* Add rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add shadow */
+  margin-top: 20px;
+}
+
+
+.dark-mode .signatures {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .petition-para p {
+  color: #ffffff;
+}
+
+.dark-mode #counter {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .petition-section {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.dark-mode .petition-para h2 {
+  color: #ffffff;
+  /* Set the color of the h2 text to white */
+}
+
+.dark-mode .petition-para p,
+.dark-mode .petition-para label {
+  color: #ffffff;
+  /* Set the color of paragraph text and labels to white */
+}
+
+.dark-mode #sign-petition button {
+  color: #ffffff;
+  /* Set the color of button text to white */
+  background-color: #000000;
+  /* Set the background color of the button to black */
+}
+
+.dark-mode #sign-petition input[type="text"],
+.dark-mode #sign-petition input[type="email"] {
+  color: #ffffff;
+  /* Set the color of input text to white */
+  background-color: #000000;
+  /* Set the background color of the input field to black */
+  border-color: #ffffff;
+  /* Set the border color of the input field to white */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .petition-container {
+    flex-direction: column;
+    /* Change to column layout on smaller screens */
+  }
+
+  .petition-para,
+  .signatures {
+    width: 100%;
+    height: 100%;
+    /* Full width on smaller screens */
+  }
+
+  .signatures {
+    margin-top: 20px;
+    /* Add margin for spacing */
+  }
+}
+
+
+
+/* Add any additional styling for dark mode here */
+
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Footer ruleset */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 5px 0;
+  text-align: center;
+}
+
+/* Footer links ruleset */
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e09b06;
+  /* Change color on hover */
+}
+
+/* Add a separator between links */
+.footer-links a:not(:last-child)::after {
+  content: "|";
+  margin: 0 10px;
+  color: #fff;
+}
+
+/* Add some spacing between the links */
+.footer-links {
+  margin-top: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .footer-links a {
+    margin: 0 10px;
+  }
+}
+
+
+
+
+/* Add to CSS file */
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background: pink;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-section.fade-in {
+  opacity: 1;
+}
+
+
+
+.About-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.About-content h2 {
+  position: relative;
+  margin-top: 100px;
+  font-size: 70px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 800;
+  width: 1000px;
+  line-height: 1.2;
+  animation: glow 2.0s infinite alternate;
+  text-decoration: underline;
+
+}
+
+.dark-mode .About-content p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  margin: 20px 0 40px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  animation: glowing 1s infinite alternate;
+
+}
+
+.dark-mode .Lifestyle-content h3 {
+  color: #ffffff;
+  /* Text color */
+  font-size: 16px;
+  /* Font size */
+  font-weight: 800;
+  /* Font weight */
+  font-family: 'Poppins', sans-serif;
+  /* Font family */
+  margin: 20px 0 40px;
+  /* Margin */
+  padding: 20px;
+  /* Padding */
+
+}
+
+.dark-mode .Resources-content h3 {
+  color: #ffffff;
+  /* Text color */
+  font-size: 16px;
+  /* Font size */
+  font-weight: 800;
+  /* Font weight */
+  font-family: 'Poppins', sans-serif;
+  /* Font family */
+  margin: 10px 0 20px;
+  /* Margin */
+  padding: 20px;
+  /* Padding */
+
+}
+
+.dark-mode .Lifestyle-content p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  margin: 20px 0 40px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  animation: glowing 1s infinite alternate;
+}
+
+
+
+.About-content p {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  margin: 40px 0 40px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  animation: glowing 1s infinite alternate;
+  /* Glowing animation */
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+    /* Initial box-shadow */
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+    /* Medium glow */
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+    /* Return to initial box-shadow */
+  }
+}
+
+.About-content h1::before {
+  content: '';
+  position: aboslute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+
+
+}
+
+/* Dashboard styles */
+.dashboard {
+  position: relative;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #27ff0a;
+  /* Glowing circle color */
+  border-radius: 50%;
+  animation: moveIndicator 5s linear infinite;
+  /* Adjust animation duration as needed */
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes moveIndicator {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* Rounded images styles */
+.rounded-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.rounded-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-left: 20px;
+  /* Adjust margin as needed */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  /* Add shadow */
+  animation: glow 2s infinite alternate;
+  /* Add glowing animation */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    /* Initial shadow */
+  }
+
+  100% {
+    box-shadow: 0 0 40px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6);
+    /* Stronger shadow */
+  }
+}
+
+
+.video-container1 p {
+  text-align: center;
+  /* Center the text */
+  font-size: 18px;
+  /* Adjust font size */
+  margin-bottom: 20px;
+  /* Add some space below the text */
+}
+
+/* CSS for adjusting spacing */
+.video-container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CSS for glowing rectangle box */
+.glowing-rectangle {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  /* Adjust the margin-top value as needed */
+}
+
+
+.glowing-rectangle::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(145deg, #1b931b, #006600);
+  border-radius: 10px;
+  z-index: -1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Adding a shadow for 3D effect */
+}
+
+.glowing-rectangle p {
+  margin: 0;
+  padding: 10px 20px;
+  background: linear-gradient(145deg, #00FF00, #006600);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  animation: highlight 2s infinite alternate;
+
+}
+
+/* Keyframes for highlighting animation */
+@keyframes highlight {
+  0% {
+    box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #00FF00;
+  }
+
+  100% {
+    box-shadow: 0 0 20px #00FF00, 0 0 40px #00FF00, 0 0 60px #00FF00, 0 0 80px #00FF00;
+  }
+}
+
+
+.lifestyle {
+  height: auto;
+  /* Change to auto to allow content to expand */
+  width: 100vw;
+  /* background: url('url23.jpg') no-repeat;
+  background-size: full; */
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.Lifestyle-content {
+  height: 160vh;
+  width: 200vw;
+  max-width: 1000px;
+  /* Adjust max-width as needed */
+  margin: 0 auto;
+  /* Center content horizontally */
+  background-size: cover;
+  margin-top: 100px;
+  /* Adjust the value as needed */
+
+}
+
+.dark-mode .Lifestyle-content {
+  height: 180vh;
+  width: 200vw;
+  max-width: 1000px;
+  /* Adjust max-width as needed */
+  margin: 0 auto;
+  /* Center content horizontally */
+  background-size: cover;
+  margin-top: 100px;
+  /* Adjust the value as needed */
+}
+
+.Lifestyle-content h2 {
+  margin-top: 50px;
+  /* Adjust margin-top as needed */
+  font-size: 40px;
+  /* Adjust font size as needed */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 800;
+  width: 100%;
+  /* Adjust width as needed */
+  line-height: 1.2;
+  animation: glow 2.0s infinite alternate;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.Lifestyle-content h2::before {
+  content: '';
+  position: absolute;
+  /* Correct the typo from "aboslute" to "absolute" */
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.Lifestyle-content h3 {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.dark-mode .Lifestyle-content h3 {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgb(255, 255, 255, 0.5);
+
+
+}
+
+
+
+.Lifestyle-content p {
+  color: #000000;
+  /* Text color */
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px 0 40px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  animation: glowing 1s infinite alternate;
+}
+
+/* Define the keyframes for the animation */
+@keyframes highlight {
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: yellow;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Apply the animation to the highlighted text */
+.highlighted {
+  animation: highlight 2s infinite;
+}
+
+.Resources {
+  height: 100vh;
+  width: 100vw;
+  /* background: url('url23.jpg') no-repeat;
+  background-size: full; */
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  viewport-fit: cover;
+}
+
+
+
+
+.Resources-content {
+  height: 120vh;
+  width: 100vw;
+  margin-top: 300px;
+  max-width: 1000px;
+  background-size: cover;
+}
+
+.Resources-content h2 {
+  position: relative;
+  margin-top: 10px;
+  font-size: 70px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 800;
+  width: 1000px;
+  line-height: 1.2;
+  animation: glow 2.0s infinite alternate;
+  text-align: center;
+  text-decoration: underline;
+
+
+}
+
+.Resources-content h1::before {
+  content: '';
+  position: aboslute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+
+
+}
+
+.Resources-content h3 {
+  color: #000000;
+  /* Text color */
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px 0 40px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+  animation: glowing 1s infinite alternate;
+}
+
+/* Define the keyframes for the animation */
+@keyframes highlight {
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: yellow;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Apply the animation to the highlighted text */
+.highlighted {
+  animation: highlight 2s infinite;
+}
+
+
+
+.Network {
+  height: 100vh;
+  width: 100vw;
+  /* background: url('url23.jpg') no-repeat;
+  background-size: full; */
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  viewport-fit: cover;
+}
+
+.Network-content {
+  height: 100vh;
+  width: 100vw;
+  max-width: 1000px;
+  background-size: cover;
+}
+
+.Network-content h1 {
+  position: relative;
+  margin-top: 100px;
+  font-size: 70px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 800;
+  width: 1000px;
+  line-height: 1.2;
+  animation: glow 2.0s infinite alternate;
+
+
+}
+
+.Network-content h1::before {
+  content: '';
+  position: aboslute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight 1s ease forwards;
+  animation-delay: 1s;
+
+
+}
+
+
+section About-content::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vh;
+  height: 100vh;
+  background: #008dff;
+  border-radius: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) scale(4);
+}
+
+section .About-content {
+  position: relative;
+  width: 200vh;
+  height: 120vh;
+  right: 20px;
+  z-index: 1;
+  max-width: 1000px;
+  text-align: center;
+  background: linear-gradient(45)
+}
+
+section .About-content h2 {
+  font-size: 3em;
+  color: #b20101;
+}
+
+section .About-content h3 {
+  font-size: 2em;
+  color: #000000;
+}
+
+section .Lifestyle-content h2 {
+  font-size: 3em;
+  color: #b20101;
+}
+
+
+section .Resources-content h2 {
+  font-size: 3em;
+  color: #b20101;
+}
+
+section .About-content p {
+  font-size: 1.2em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+    /* Start rotation from 0 degrees */
+  }
+
+  to {
+    transform: rotate(360deg);
+    /* End rotation at 360 degrees (full circle) */
+  }
+}
+
+.modal-image {
+  max-width: 200px;
+  /* Set the maximum width */
+  max-height: 200px;
+  /* Set the maximum height */
+  width: auto;
+  /* Allow the width to adjust proportionally */
+  height: auto;
+  /* Allow the height to adjust proportionally */
+  transform: rotate(45deg);
+  /* Rotate the image by 45 degrees */
+  animation: rotateAnimation 5s linear infinite;
+  /* Apply the rotation animation */
+
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#sign-now-button {
+  position: relative;
+  color: #e09b06;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 300;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  margin-left: 35px;
+  transition: .5s;
+}
+
+.Resources-content {
+  text-align: center;
+
+}
+
+
+.card {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  /* Rounded corners */
+  background: linear-gradient(to bottom, #Ffffff, #000000);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  /* Glow effect */
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  /* Ensures child elements respect rounded corners */
+  border: black;
+}
+
+.dark-mode .card {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  /* Rounded corners */
+  background: linear-gradient(to bottom, #000000, #FFFFFF);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  /* Glow effect */
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  /* Ensures child elements respect rounded corners */
+  border: black;
+}
+
+.card img {
+  width: 150px;
+  /* Adjust the width and height to your preference */
+  height: 150px;
+  border-radius: 50%;
+  /* Make the image a circle */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+.card h4 {
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: overline;
+  animation: glow 2s infinite alternate;
+
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #00ffff, 0 0 80px #00ffff, 0 0 90px #00ffff, 0 0 100px #00ffff, 0 0 150px #00ffff;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff;
+  }
+}
+
+.card p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card:hover,
+.card:hover {
+  color: #fff;
+  /* Hover text color */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+
+.glowing-textbox {
+  border: none;
+  /* Remove border */
+  padding: 20px;
+  /* Adjust padding as needed */
+  background-color: rgba(0, 255, 0, 0);
+  /* Transparent background */
+  position: relative;
+  /* Position relative to its container */
+  top: -200px;
+  /* Move the textbox up by 20 pixels */
+  left: -800px;
+  /* Move the textbox to the left by 20 pixels */
+}
+
+
+.dark-mode .glowing-textbox h2 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  /* White text */
+  text-align: center;
+  text-decoration: underline;
+}
+
+.glowing-textbox h2 {
+  margin-bottom: 10px;
+  color: #000000;
+  /* White text */
+  text-align: center;
+  text-decoration: underline;
+  animation: glow 2s infinite alternate;
+  /* Glowing animation */
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+    /* Initial glowing effect */
+  }
+
+  100% {
+    text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+    /* Stronger glowing effect */
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons img {
+  width: 120x;
+  /* Increased icon size */
+  height: 120px;
+  /* Increased icon size */
+  border-radius: 50%;
+  box-shadow: 0 0 40px #000000;
+  /* Green glowing effect */
+  transition: transform 0.3s ease-in-out;
+  /* Add a smooth transition on hover */
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  /* Scale up the icon on hover */
+}
+
+/* Define the keyframes for rotating animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    /* Start with no rotation */
+  }
+
+  100% {
+    transform: rotate(360deg);
+    /* Rotate 360 degrees */
+  }
+}
+
+
+.chart-item {
+  margin-bottom: 20px;
+}
+
+.chart-heading {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+  /* Bold the text */
+  position: relative;
+  /* Position relative for absolute arrow */
+}
+
+.chart-heading::after {
+  content: '\2192';
+  /* Unicode arrow character */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* Fade-in animation */
+}
+
+.chart-heading:hover::after {
+  opacity: 1;
+}
+
+.chart-content {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
